@@ -23,7 +23,7 @@
         <td><%= gadget.price %></td>
         <td><%= gadget.company %></td>
         <td><%= gadget.ratings %></td>
-        <td><%= gadget.picture %></td>
+        <td>  <%= image_tag(gadget.picture_url, width: 80,height:80) if gadget.picture.present? %></td>
         <td><%= link_to 'Show', gadget %></td>
         <td><%= link_to 'Edit', edit_gadget_path(gadget) %></td>
         <td><%= link_to 'Destroy', gadget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
